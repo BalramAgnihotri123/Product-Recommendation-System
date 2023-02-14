@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Product Recommendations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <style type="text/css">
+      body{
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(90deg,#24243e,#302b63,#0f0c29);
+        margin:0;
+        padding:0;
+      }
+      .heading{
+        color:white;
+        text-align: center;
+        padding: 2.5rem 0;
+      }
+      .input-bar{
+        width:100%;
+        display:flex;
+        justify-content: center;
+      }
+       #customerId{
+        padding: 0.5rem;
+        border-radius: 50px 0 0 50px;
+      }
+      .submit-btn{
+         border-radius: 0 50px 50px 0;
+       }
+       .loader{
+        color:white;
+        width:100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 2.5ch;
+        padding:1rem 0;
+       }
+       #recommendations{
+        display:flex;
+        flex-flow:row wrap;
+        color:white;
+       }
+       #recommendations > p{
+        padding:0.9rem 0;
+        font-size:2ch;
+        font-weight: 500;
+        margin:0 1.5rem;
+       }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Product Recommendations</h1>
+    <div class="input-bar">
+      <input type="text" id="customerId" name="Customer Id" placeholder="Enter Customer Id" />
+      <button onclick="getRecommendations()" class="submit-btn">Submit</button>
+    </div>
+    <div class="loader""></div>
+    <div id="recommendations">
+    </div>
+    <script type="text/javascript" src="script/index.js">
+    </script>
+  </body>
+</html>
