@@ -15,7 +15,7 @@ def get_recommendations():
         if customer_id is None or date is None:
             return "Error: customer_id and date parameters are required", 400
 
-        # Simulate a delay for loading recommendations
+        # Simulate a delay for loading recommendation
         #time.sleep(15)
         recom_engine = rs.RecommendationEngine(root = 'cleaned_online_retail.csv')
         recommendations = recom_engine.recommend_products(float(customer_id),date_str=str(date))
